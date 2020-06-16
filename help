@@ -1,0 +1,9 @@
+codename 1.0 beta
+A simple utility to translate an input into all the languages available at once.
+
+USAGE:
+    codename [OPTIONS] [SUBCOMMAND]
+
+OPTIONS:
+    -t, --translate [INPUT (SUBCOMMAND)]
+        Translate the input into all languages available
