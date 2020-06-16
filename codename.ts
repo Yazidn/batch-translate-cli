@@ -1,13 +1,11 @@
-import Spinner from 'https://raw.githubusercontent.com/ameerthehacker/cli-spinners/master/mod.ts';
-const spinner = Spinner.getInstance();
-
+import { key } from './env.ts';
 import { parse } from "https://deno.land/std/flags/mod.ts";
-const flags = parse(Deno.args);
-
 import { jsonTree } from "https://deno.land/x/json_tree/mod.ts";
 import { open } from "https://raw.githubusercontent.com/denjucks/opener/master/mod.ts";
+import Spinner from 'https://raw.githubusercontent.com/ameerthehacker/cli-spinners/master/mod.ts';
 
-import { key } from './env.ts';
+const flags = parse(Deno.args);
+const spinner = Spinner.getInstance();
 
 if (flags.t || flags.translate) getSupportedLanguages(flags.t || flags.translate, key);
 if (flags.h || flags.help) help();
